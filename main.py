@@ -10,11 +10,6 @@ def get_quote():
     response.raise_for_status()
     data = response.json()
     quote = data['quote']
-    display_quote()
-
-
-def display_quote():
-    global quote
     canvas.itemconfig(quote_text, text=f"{quote}")
 
 
